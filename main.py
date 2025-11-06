@@ -7,11 +7,11 @@ def main():
     path_to_book = argv[1]
     write_report(path_to_book)
     
-def get_book_text(path):
-    with open(path, "r") as f:
+def get_book_text(path_to_book:str) -> str:
+    with open(path_to_book, "r") as f:
         return f.read()
     
-def write_report(path_to_book):
+def write_report(path_to_book:str) -> None:
     print("============ BOOKBOT ============")
 
     text = get_book_text(path_to_book)
